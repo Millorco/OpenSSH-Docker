@@ -17,6 +17,6 @@ ssh.keygen -b 4096 -C "$(whoami)@$(hostname)"
 
 copia la chiave ssh sul server
 
-ssh-copy-id $(whoami)@130.162.213.149
+ssh-copy-id -p 2200 $(whoami)@130.162.213.149
 
  
