@@ -24,10 +24,15 @@ ssh-copy-id -p 2200 $(whoami)@130.162.213.149
 MANUALE
 
 cp ./ssh/id_rsa.pub /home/user
+
 mkdir .ssh
+
 chmod  700 .ssh
+
 cat id_rsa.pub >> .ssh/authorized_keys
+
 rm id_rsa.pub
+
 chmod 600 .ssh/authorized_keys
 
 
