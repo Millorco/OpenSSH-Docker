@@ -19,4 +19,7 @@ copia la chiave ssh sul server
 
 ssh-copy-id -p 2200 $(whoami)@130.162.213.149
 
- 
+
+ssh -Nf -R 2200:localhost:22 user@computer.esterno
+
+ssh -Ng -R *:2200:localhost:22 $(whoami)@130.162.213.149
