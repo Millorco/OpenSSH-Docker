@@ -1,4 +1,4 @@
-docker build -t alpine-sshd .
+sudo docker build -t alpine-sshd .
 
 
 
