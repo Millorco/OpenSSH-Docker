@@ -13,7 +13,7 @@ ssh test@docker-sever-ip-here
 
 Generare chiavi SSH sul client
 
-ssh.keygen -b 4096 -C "$(whoami)@$(hostname)"
+ssh-keygen -b 4096 -C "$(whoami)@$(hostname)"
 
 copia la chiave ssh sul server
 
