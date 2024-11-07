@@ -11,7 +11,12 @@ Now you can ssh into it:
 ssh test@docker-sever-ip-here
 
 
-Generare chiavi SSH
- ssh.keygen -b 4096 -C "$(whoami)@$(hostname)"
+Generare chiavi SSH sul client
+
+ssh.keygen -b 4096 -C "$(whoami)@$(hostname)"
+
+copia la chiave ssh sul server
+
+ssh-copy-id $(whoami)@130.162.213.149
 
  
