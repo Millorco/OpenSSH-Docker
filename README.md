@@ -26,7 +26,7 @@ ssh-copy-id -i $(whoami)@$(hostname).pub -p 2200 $(hostname)@130.162.213.149
 
 TEST SSH Connectio
 
-ssh -p 2200 $(hostname)@130.162.213.149
+ssh -p 2200 -i ~/.ssh/$(whoami)@$(hostname) $(hostname)@130.162.213.149
 
 
 MANUALE
