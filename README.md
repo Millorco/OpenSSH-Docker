@@ -8,12 +8,12 @@ sudo docker run --name OpenSSH_Server -d -p 2200:22 alpine-sshd:latest
 
 Generare chiavi SSH sul Server per utente root
 
-ssh-keygen -b 4096 
+ssh-keygen -b 4096 -f ~/$(hostname)
 
 
 Generare chiavi SSH sul client
 
-ssh-keygen -b 4096 -C "$(whoami)@$(hostname)"
+ssh-keygen -b 4096 -f ~/$(whoami)@$(hostname) -C "$(whoami)@$(hostname)"
 
 copia la chiave ssh sul server
 
