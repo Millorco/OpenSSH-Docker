@@ -7,8 +7,8 @@ RUN apk add --no-cache \
     nano 
 
 RUN echo 'PasswordAuthentication yes' >> /etc/ssh/sshd_config
-RUN adduser -h /home/test -s /bin/sh -D test
-RUN echo -n 'test:69R%MYjRmL' | chpasswd
+RUN adduser -h /home/villa-aylin -s /bin/sh -D villa-aylin
+RUN echo -n 'villa-aylin:password' | chpasswd
 RUN echo "root:password" | chpasswd
 ENTRYPOINT ["/entrypoint.sh"]
 EXPOSE 22
