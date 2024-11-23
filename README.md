@@ -22,7 +22,8 @@ copia la chiave ssh sul server
 
 AUTOMATICO 
 
-ssh-copy-id -p 2200 $(whoami)@130.162.213.149
+ssh-copy-id -i id_rsa.pub -p 2200 $(hostname)@130.162.213.149
+
 
 MANUALE
 
