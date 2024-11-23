@@ -13,7 +13,7 @@ ssh-keygen -b 4096 -f ~/$(hostname)
 
 Generare chiavi SSH sul client
 
-ssh-keygen -b 4096 -f ~/$(whoami)@$(hostname) -C "$(whoami)@$(hostname)"
+ssh-keygen -b 4096 -f ~/.ssh/$(whoami)@$(hostname) -C "$(whoami)@$(hostname)"
 
 copia la chiave ssh sul server
 
