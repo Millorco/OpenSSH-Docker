@@ -29,22 +29,9 @@ TEST SSH Connectio
 ssh -p 2200 -i ~/.ssh/$(whoami)@$(hostname) $(hostname)@130.162.213.149
 
 
-MANUALE
+REVERSE TUnnel 
 
-cp ./ssh/id_rsa.pub /home/user
-
-mkdir .ssh
-
-chmod  700 .ssh
-
-cat id_rsa.pub >> .ssh/authorized_keys
-
-rm id_rsa.pub
-
-chmod 600 .ssh/authorized_keys
-
-
-
+ssh -R 3000:127.0.0.1:22 -o ExitOnForwardFailure=yes -p 2200 -i ~/.ssh/$(whoami)@$(hostname) $(hostname)@130.162.213.149
 
 ssh -Nf -R 2200:localhost:22 user@computer.esterno
 
