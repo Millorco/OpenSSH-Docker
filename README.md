@@ -15,6 +15,8 @@ Generare chiavi SSH sul client
 
 ssh-keygen -b 4096 -f ~/.ssh/$(whoami)@$(hostname) -C "$(whoami)@$(hostname)"
 
+chmod 400 ~/.ssh/$(whoami)@$(hostname)*
+
 copia la chiave ssh sul server
 
 AUTOMATICO 
