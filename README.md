@@ -22,6 +22,7 @@ AUTOMATICO
 ssh-copy-id -i $(whoami)@$(hostname).pub -p 2200 $(hostname)@130.162.213.149
 
 
+
 MANUALE
 
 cp ./ssh/id_rsa.pub /home/user
