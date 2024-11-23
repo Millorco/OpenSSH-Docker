@@ -6,6 +6,10 @@ sudo docker build -t alpine-sshd .
 
 sudo docker run --name OpenSSH_Server -d -p 2200:22 alpine-sshd:latest
 
+Generare chiavi SSH sul Server per utente root
+
+ssh-keygen -b 4096 
+
 
 Generare chiavi SSH sul client
 
