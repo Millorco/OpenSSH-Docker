@@ -4,7 +4,8 @@ FROM alpine:latest
 RUN apk add --no-cache \
     bash \
     openssh \
-    nano 
+    nano \
+    sshpass
 
 RUN echo 'PasswordAuthentication yes' >> /etc/ssh/sshd_config
 RUN adduser -h /home/villa-aylin -s /bin/sh -D villa-aylin
