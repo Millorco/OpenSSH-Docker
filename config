@@ -1,7 +1,7 @@
 # ~/.ssh/config
 
 Host ssh-server
-   HostName      130.162.213.149
+   HostName      sshserver.fagnano.eu
    User          autossh
    Port          2200
    RemoteForward  3000 localhost:22
