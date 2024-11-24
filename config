@@ -1,0 +1,9 @@
+# ~/.ssh/config
+
+Host ssh-server
+   HostName      130.162.213.149
+   User          autoaah
+   RemoteForward  5001 localhost:22
+   RemoteForward  5002 localhost:80
+   ServerAliveInterval 90
+   ServerAliveCountMax 3
