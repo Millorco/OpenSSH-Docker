@@ -41,7 +41,7 @@ ESEGUIRE SCRIPT
 
 Installare sshpass
 
-apk add --update sshpass
+apk add --update sshpass (già inserito nel container)
 
 
 lancio script su host remoto
