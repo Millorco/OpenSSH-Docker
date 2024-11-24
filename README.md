@@ -36,3 +36,14 @@ ssh -R 3000:127.0.0.1:22 -o ExitOnForwardFailure=yes -p 2200 -i ~/.ssh/$(whoami)
 ssh -Nf -R 2200:localhost:22 user@computer.esterno
 
 ssh -Ng -R *:2200:localhost:22 $(whoami)@130.162.213.149
+
+ESEGUIRE SCRIPT
+
+Installare sshpass
+
+apk add --update sshpass
+
+
+lancio script su host remoto
+
+sshpass -p password ssh -p 3000 webcam@localhost 'bash -s' < prova.sh
