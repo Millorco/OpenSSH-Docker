@@ -6,6 +6,13 @@ sudo docker build -t alpine-sshd .
 
 sudo docker run --name OpenSSH_Server -d -p 2200:22 alpine-sshd:latest
 
+
+Creare le utenze per il tunnel l'utente si chiamera autossh
+useradd -m -s /bin/false autossh
+
+Loggarsi come utente autossh
+su -s /bin/bash autossh
+
 Generare chiavi SSH sul Server per utente root
 
 ssh-keygen -b 4096 -f ~/$(hostname)
