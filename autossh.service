@@ -4,7 +4,7 @@ After=network.target
 
 [Service]
 Environment="AUTOSSH_GATETIME=0"
-ExecStart=/usr/bin/autossh -M 0 my-tunnel-name -N
+ExecStart=/usr/bin/autossh -M 0 ssh-server -N
 Restart=always
 RestartSec=15s
 
