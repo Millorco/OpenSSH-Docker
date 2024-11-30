@@ -48,6 +48,11 @@ TEST SSH Connectio
 ssh -p 2200 -i ~/.ssh/autossh@$(hostname) autossh@130.162.213.149
 
 
+INSTALLARE AUTOSSH Sul Client
+apt-get update 
+apt-get install autossh
+
+
 
 REVERSE TUnnel 
 
