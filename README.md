@@ -53,6 +53,10 @@ apt-get update
 apt-get install autossh
 
 
+Copiare e modificare il file config
+
+copiare e modificare il file autossh.service
+
 
 REVERSE TUnnel 
 
