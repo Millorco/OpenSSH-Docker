@@ -1,1 +1,10 @@
+# ~/.ssh/config
 
+Host ssh-server
+   HostName      sshserver.fagnano.eu
+   User          autossh
+   Port          2200
+   RemoteForward  3000 localhost:22
+   ServerAliveInterval 60
+   ServerAliveCountMax 3
+   IdentityFile ~/.ssh/webcam@villa-aylin
