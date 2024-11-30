@@ -45,7 +45,7 @@ ssh-copy-id -i autossh@$(hostname).pub -p 2200 autossh@130.162.213.149
 
 TEST SSH Connectio
 
-ssh -p 2200 -i ~/.ssh/autossh@$(hostname) autossh@130.162.213.149
+NO NO NO ssh -p 2200 -i ~/.ssh/autossh@$(hostname) autossh@130.162.213.149
 
 
 INSTALLARE AUTOSSH Sul Client
@@ -62,13 +62,10 @@ systemctl start autossh
 systemctl status autossh
 systemctl enable autossh
 
-REVERSE TUnnel 
+AGGIUNGER HOST
 
-ssh -R 3000:127.0.0.1:22 -o ExitOnForwardFailure=yes -p 2200 -i ~/.ssh/$(whoami)@$(hostname) $(hostname)@130.162.213.149
+sudo -u autossh ssh ssh-server 
 
-ssh -Nf -R 2200:localhost:22 user@computer.esterno
-
-ssh -Ng -R *:2200:localhost:22 $(whoami)@130.162.213.149
 
 ESEGUIRE SCRIPT
 
