@@ -16,6 +16,10 @@ creare utenza steso nome hostname
 Creare le utenze per il tunnel l'utente si chiamera autossh
 useradd -m -s /bin/false autossh
 
+Alpine LInux
+adduser -D -s /bin/false autossh
+
+
 Loggarsi come utente autossh
 su -s /bin/bash autossh
 
@@ -38,6 +42,8 @@ ssh-copy-id -i $(whoami)@$(hostname).pub -p 2200 $(hostname)@130.162.213.149
 
 
 TEST SSH Connectio
+
+ssh -p 2200 -i ~/.ssh/autossh@$(hostname) autossh@130.162.213.149
 
 ssh -p 2200 -i ~/.ssh/$(whoami)@$(hostname) $(hostname)@130.162.213.149
 
