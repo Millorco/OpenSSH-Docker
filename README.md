@@ -5,6 +5,7 @@
 
 <p><strong>Sul Server Alpine</strong></p>
 <p>adduser autossh</p>
+<p>Modificare SSH config file</p></br>
 <p>Alla fine rimuovere password</p></br>
 
 <p><strong>Sul Client</strong></p>
