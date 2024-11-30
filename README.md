@@ -15,9 +15,11 @@ Modificare hostname
 creare utenza steso nome hostname
 
 Creare le utenze per il tunnel l'utente si chiamera autossh
+
 useradd -m -s /bin/false autossh
 
 Alpine LInux dopo rimuovere password
+
 adduser autossh
 
 
