@@ -23,9 +23,9 @@
 
 <p><strong>copia la chiave ssh sul server</strong></p>
 <p>AUTOMATICO</p>
-<p>ssh-copy-id -i autossh@$(hostname).pub -p 2200 autossh@130.162.213.149</p></br>
+<p>ssh-copy-id -i autossh@$(hostname).pub -p 2200 autossh@sshserver.fagnano.eu</p></br>
 <p>TEST SSH Connectio</p>
-<p>NO NO NO ssh -p 2200 -i ~/.ssh/autossh@$(hostname) autossh@130.162.213.149</p></br>
+<p>NO NO NO ssh -p 2200 -i ~/.ssh/autossh@$(hostname) autossh@sshserver.fagnano.eu</p></br>
 
 <p><strong>INSTALLARE AUTOSSH Sul Client</strong></p>
 <p>apt-get update</p>
