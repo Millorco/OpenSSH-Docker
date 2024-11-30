@@ -16,8 +16,8 @@ creare utenza steso nome hostname
 Creare le utenze per il tunnel l'utente si chiamera autossh
 useradd -m -s /bin/false autossh
 
-Alpine LInux
-adduser -D -s /bin/false autossh
+Alpine LInux dopo rimuovere password
+adduser autossh
 
 
 Loggarsi come utente autossh
@@ -38,14 +38,13 @@ copia la chiave ssh sul server
 
 AUTOMATICO 
 
-ssh-copy-id -i $(whoami)@$(hostname).pub -p 2200 $(hostname)@130.162.213.149
+ssh-copy-id -i autossh@$(hostname).pub -p 2200 autossh@130.162.213.149
 
 
 TEST SSH Connectio
 
 ssh -p 2200 -i ~/.ssh/autossh@$(hostname) autossh@130.162.213.149
 
-ssh -p 2200 -i ~/.ssh/$(whoami)@$(hostname) $(hostname)@130.162.213.149
 
 
 REVERSE TUnnel 
