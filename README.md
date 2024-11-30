@@ -57,6 +57,10 @@ Copiare e modificare il file config
 
 copiare e modificare il file autossh.service
 
+systemctl daemon-reload
+systemctl start autossh
+systemctl status autossh
+systemctl enable autossh
 
 REVERSE TUnnel 
 
