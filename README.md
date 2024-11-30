@@ -40,12 +40,12 @@ copia la chiave ssh sul server
 
 AUTOMATICO 
 
-ssh-copy-id -i autossh@$(hostname).pub -p 2200 autossh@130.162.213.149
+ssh-copy-id -i autossh@$(hostname).pub -p 2200 autossh@sshserver.fagnano.eu
 
 
 TEST SSH Connectio
 
-NO NO NO ssh -p 2200 -i ~/.ssh/autossh@$(hostname) autossh@130.162.213.149
+NO NO NO ssh -p 2200 -i ~/.ssh/autossh@$(hostname) autossh@sshserver.fagnano.eu
 
 
 INSTALLARE AUTOSSH Sul Client
