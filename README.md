@@ -41,14 +41,6 @@
 <p><strong>AGGIUNGER HOST</strong></p>
 <p>sudo -u autossh ssh ssh-server</p></br>
 
-
-ESEGUIRE SCRIPT
-
-Installare sshpass
-
-apk add --update sshpass (già inserito nel container)
-
-
-lancio script su host remoto
-
-sshpass -p password ssh -p 3000 webcam@localhost 'bash -s' < prova.sh
+<p><strong>ESEGUIRE SCRIPT</strong></p>
+<p>lancio script su host remoto</p>
+<p>sshpass -p password ssh -p 3000 webcam@localhost 'bash -s' < prova.sh</p>
