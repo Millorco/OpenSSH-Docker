@@ -1,73 +1,45 @@
-Creare Container
-<p>Creare Container</p>
+<p><strong>Creare Container</strong></p>
+<p>sudo chmod +x entrypoint.sh</p>
+<p>sudo docker build -t alpine-sshd .</p>
+<p>sudo docker run --name OpenSSH_Server -d -p 2200:22 alpine-sshd:latest</p></br>
 
-sudo chmod +x entrypoint.sh
+<p><strong>Sul Server Alpine</strong></p>
+<p>adduser autossh</p>
+<p>Alla fine rimuovere password</p></br>
 
-sudo docker build -t alpine-sshd .
+<p><strong>Sul Client</strong></p>
+<p>Modificare hostname</p></br>
+<p>creare utenza steso nome hostname</p></br>
+<p>Creare le utenze per il tunnel, utente autossh</p>
+<p>useradd -m -s /bin/false autossh</p></br>
 
-sudo docker run --name OpenSSH_Server -d -p 2200:22 alpine-sshd:latest
+<p>Loggarsi come utente autossh</p>
+<p>su -s /bin/bash autossh</p>
 
+<p>Generare chiavi SSH sul client</p>
+<p>ssh-keygen -b 4096 -f ~/.ssh/$(whoami)@$(hostname) -C "$(whoami)@$(hostname)"</p>
+<p>chmod 400 ~/.ssh/$(whoami)@$(hostname)*</p></br>
 
+<p><strong>copia la chiave ssh sul server</strong></p>
+<p>AUTOMATICO</p>
+<p>ssh-copy-id -i autossh@$(hostname).pub -p 2200 autossh@130.162.213.149</p></br>
+<p>TEST SSH Connectio</p>
+<p>NO NO NO ssh -p 2200 -i ~/.ssh/autossh@$(hostname) autossh@130.162.213.149</p></br>
 
-SUL Client
+<p><strong>INSTALLARE AUTOSSH Sul Client</strong></p>
+<p>apt-get update</p>
+<p>apt-get install autossh</p></br>
 
-Modificare hostname
+<p><strong>Modifica FILE Client</strong></p>
+<p>Copiare e modificare il file config</p>
+<p>copiare e modificare il file autossh.service</p>
+<p>systemctl daemon-reload</p>
+<p>systemctl start autossh</p>
+<p>systemctl status autossh</p>
+<p>systemctl enable autossh</p></br>
 
-creare utenza steso nome hostname
-
-Creare le utenze per il tunnel l'utente si chiamera autossh
-
-useradd -m -s /bin/false autossh
-
-Alpine LInux dopo rimuovere password
-
-adduser autossh
-
-
-
-Loggarsi come utente autossh
-su -s /bin/bash autossh
-
-Generare chiavi SSH sul Server per utente root
-
-ssh-keygen -b 4096 -f ~/$(hostname)
-
-
-Generare chiavi SSH sul client
-
-ssh-keygen -b 4096 -f ~/.ssh/$(whoami)@$(hostname) -C "$(whoami)@$(hostname)"
-
-chmod 400 ~/.ssh/$(whoami)@$(hostname)*
-
-copia la chiave ssh sul server
-
-AUTOMATICO 
-
-ssh-copy-id -i autossh@$(hostname).pub -p 2200 autossh@sshserver.fagnano.eu
-
-
-TEST SSH Connectio
-
-NO NO NO ssh -p 2200 -i ~/.ssh/autossh@$(hostname) autossh@sshserver.fagnano.eu
-
-
-INSTALLARE AUTOSSH Sul Client
-apt-get update 
-apt-get install autossh
-
-
-Copiare e modificare il file config
-
-copiare e modificare il file autossh.service
-
-systemctl daemon-reload
-systemctl start autossh
-systemctl status autossh
-systemctl enable autossh
-
-AGGIUNGER HOST
-
-sudo -u autossh ssh ssh-server 
+<p><strong>AGGIUNGER HOST</strong></p>
+<p>sudo -u autossh ssh ssh-server</p></br>
 
 
 ESEGUIRE SCRIPT
