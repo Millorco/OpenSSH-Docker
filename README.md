@@ -7,6 +7,7 @@ sudo docker build -t alpine-sshd .
 sudo docker run --name OpenSSH_Server -d -p 2200:22 alpine-sshd:latest
 
 
+
 SUL Client
 
 Modificare hostname
@@ -18,6 +19,7 @@ useradd -m -s /bin/false autossh
 
 Alpine LInux dopo rimuovere password
 adduser autossh
+
 
 
 Loggarsi come utente autossh
