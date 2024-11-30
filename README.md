@@ -7,6 +7,12 @@ sudo docker build -t alpine-sshd .
 sudo docker run --name OpenSSH_Server -d -p 2200:22 alpine-sshd:latest
 
 
+SUL Client
+
+Modificare hostname
+
+creare utenza steso nome hostname
+
 Creare le utenze per il tunnel l'utente si chiamera autossh
 useradd -m -s /bin/false autossh
 
