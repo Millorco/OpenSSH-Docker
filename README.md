@@ -32,6 +32,10 @@
 <p>apt-get install autossh</p>
 <p>apt-get install git -y</p></br>
 
+
+<p><strong>Clonare repository Git</strong></p>
+<p>git clone https://github.com/Millorco/OpenSSH-Docker.git</p></br>
+
 <p><strong>Modifica FILE Client</strong></p>
 <p>Copiare e modificare il file config</p>
 <p>copiare e modificare il file autossh.service</p>
