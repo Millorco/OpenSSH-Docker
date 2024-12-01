@@ -14,3 +14,4 @@ RUN echo "root:password" | chpasswd
 ENTRYPOINT ["/entrypoint.sh"]
 EXPOSE 22
 COPY entrypoint.sh /
+COPY sshd_server.conf etc/ssh/sshd_config.d/sshd_server.conf
