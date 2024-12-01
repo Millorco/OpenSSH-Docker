@@ -27,9 +27,10 @@
 <p>TEST SSH Connectio</p>
 <p>NO NO NO ssh -p 2200 -i ~/.ssh/autossh@$(hostname) autossh@sshserver.fagnano.eu</p></br>
 
-<p><strong>INSTALLARE AUTOSSH Sul Client</strong></p>
+<p><strong>INSTALLARE AUTOSSH e Git Sul Client</strong></p>
 <p>apt-get update</p>
-<p>apt-get install autossh</p></br>
+<p>apt-get install autossh</p>
+<p>apt-get install git -y</p></br>
 
 <p><strong>Modifica FILE Client</strong></p>
 <p>Copiare e modificare il file config</p>
