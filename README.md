@@ -40,7 +40,10 @@
 <p>Copiare e modificare il file config</p>
 <p>cp config /home/autossh/.ssh/</p>
 <p>chown autossh:autossh /home/autossh/.ssh/config</p></br>
+
 <p>copiare il file autossh.service</p>
+<p>cp autossh.service /etc/systemd/system/</p></br>
+
 <p>systemctl daemon-reload</p>
 <p>systemctl start autossh</p>
 <p>systemctl status autossh</p>
