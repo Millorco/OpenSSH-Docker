@@ -8,8 +8,8 @@ RUN apk add --no-cache \
     sshpass
 
 RUN echo 'PasswordAuthentication yes' >> /etc/ssh/sshd_config
-RUN adduser -h /home/villa-aylin -s /bin/sh -D villa-aylin
-RUN echo -n 'villa-aylin:password' | chpasswd
+RUN adduser -h /home/autossh -s /bin/sh -D autossh
+RUN echo -n 'autossh:password' | chpasswd
 RUN echo "root:password" | chpasswd
 ENTRYPOINT ["/entrypoint.sh"]
 EXPOSE 22
