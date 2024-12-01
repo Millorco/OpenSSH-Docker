@@ -8,7 +8,7 @@
 
 <p><strong>Sul Client</strong></p>
 <p>Modificare hostname</p></br>
-<p>reboot/p></br>
+<p>reboot</p></br>
 <p>creare utenza steso nome hostname</p></br>
 <p>useradd -m -p password $hostname</p></br>
 <p>Creare le utenze per il tunnel, utente autossh</p>
