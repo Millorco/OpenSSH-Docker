@@ -38,7 +38,9 @@
 
 <p><strong>Modifica FILE Client</strong></p>
 <p>Copiare e modificare il file config</p>
-<p>copiare e modificare il file autossh.service</p>
+<p>cp config /home/autossh/.ssh/</p>
+<p>chown autossh:autossh /home/autossh/.ssh/config</p></br>
+<p>copiare il file autossh.service</p>
 <p>systemctl daemon-reload</p>
 <p>systemctl start autossh</p>
 <p>systemctl status autossh</p>
