@@ -17,9 +17,9 @@
 <p>Loggarsi come utente autossh</p>
 <p>su -s /bin/bash autossh</p>
 
-<p>Generare chiavi SSH sul client</p>
-<p>ssh-keygen -b 4096 -f ~/.ssh/$(whoami)@$(hostname) -C "$(whoami)@$(hostname)"</p>
-<p>chmod 400 ~/.ssh/$(whoami)@$(hostname)*</p></br>
+<p>Generare chiavi SSH sul client per utente autossh</p>
+<p>ssh-keygen -b 4096 -f ~/.ssh/autossh@$(hostname) -C "autossh@$(hostname)"</p>
+<p>chmod 400 ~/.ssh/autossh@$(hostname)*</p></br>
 
 <p><strong>copia la chiave ssh sul server</strong></p>
 <p>AUTOMATICO</p>
