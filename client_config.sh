@@ -7,7 +7,7 @@ echo "$hostname" > /etc/hostname
 
 echo Inserisci l'indirizzo del server SSH
 read server
-echo Il server ▒$server
+echo Il server $server
 
 
 echo Inserisci la porta tpc per il forward
